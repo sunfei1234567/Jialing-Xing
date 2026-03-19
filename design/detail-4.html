@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Project Detail - Jialing Xing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../common.css">
+
+    <style>
+        .detail-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 150px 30px 30px;
+            padding-top: 100px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+
+        .detail-header {
+            margin-bottom: 40px;
+        }
+
+
+
+        .detail-title {
+            font-size: 42px;
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .detail-subtitle {
+            font-size: 18px;
+            color: var(--grey-text);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+
+        .detail-content {
+            color: var(--white);
+            line-height: 1.8;
+        }
+
+
+
+        .detail-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .detail-gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--primary);
+        }
+
+        /* Video Container Styles */
+        .detail-video {
+            width: 100%;
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .detail-video video {
+            width: 100%;
+            display: block;
+        }
+
+        .detail-video-controls {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .video-title {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .detail-container {
+                padding: 120px 20px 40px;
+            }
+
+            .detail-title {
+                font-size: 32px;
+            }
+
+            .detail-subtitle {
+                font-size: 16px;
+            }
+
+            .detail-image {
+                height: 300px;
+            }
+
+            .detail-content h2 {
+                font-size: 24px;
+            }
+
+            .detail-content h3 {
+                font-size: 20px;
+            }
+
+            .detail-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-gallery img {
+                height: 250px;
+            }
+
+            .detail-video {
+                margin: 30px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1><a href="../index.html" class="logo">Jialing Xing</a></h1>
+            <ul class="navigation-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../cv.html">CV</a></li>
+                <li><a href="../research.html">Marketing Strategy</a></li>
+                <li><a class="active" href="../design.html">Design</a></li>
+                <!-- <li><a href="../contact.html">Contact</a></li> -->
+            </ul>
+            <i class="mobile-menu-toggle fas fa-bars" aria-label="Toggle menu"></i>
+        </nav>
+
+        <div class="detail-container">
+            <a href="../design.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Design
+            </a>
+
+            <!-- title & desc -->
+            <div class="detail-header">
+                <h1 class="detail-title">Trace</h1>
+                <p class="detail-subtitle">
+                    Large-scale wars caused by conflicts between countries still exist today in the 21st
+                    century. Wars bring various threats not only to nature but also to human beings. This
+                    kind of persecution of nature and psychological trauma of the people is like an
+                    indelible trace, I combine this kind of war trauma with the allergy of the human body. I
+                    made a human body installation, combining mangoes, pollen, cosmetics and seafood to
+                    people's allergic reactions, which is analogous to the destruction of soil, the
+                    pollution of Marine life, the destruction of forests and the pollution of the atmosphere
+                    after the war. Let them have a close connection before, so that people can more directly
+                    see the human and the earth's allergy to war, to call for world peace, reduce the vision
+                    of war.
+                </p>
+            </div>
+
+
+
+            <!-- image-gallery -->
+            <div class="detail-content">
+                <div class="detail-gallery">
+                    <img src="../images/design/work4/Hi, I’m Jialing Xing_19.png" alt="Site Analysis">
+                    <img src="../images/design/work4/Hi, I’m Jialing Xing_20.png" alt="Site Analysis">
+                    <img src="../images/design/work4/Hi, I’m Jialing Xing_21.png" alt="Site Analysis">
+                    <img src="../images/design/work4/Hi, I’m Jialing Xing_22.png" alt="Site Analysis">
+                    <img src="../images/design/work4/Hi, I’m Jialing Xing_23.png" alt="Site Analysis">
+                    <img src="../images/design/work4/Hi, I’m Jialing Xing_24.png" alt="Site Analysis">
+                </div>
+
+
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright © 2026 Jialing Xing. All rights reserved.</p>
+        </footer>
+    </header>
+
+      
+    <script src="../js/image-viewer.js"></script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

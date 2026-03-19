@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Strategy - Jialing Xing Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./common.css">
+
+    <!-- Research Page Styles -->
+    <style>
+        .research-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 150px 60px 60px;
+        }
+
+        .research-header {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .research-header h1 {
+            font-size: 48px;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .research-header p {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .research-header a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .research-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        /* Blog Post Card Style */
+        .research-card {
+            width: 100%;
+            padding: 4rem;
+            background: rgba(219, 219, 219, 0.18);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .research-card-img {
+            min-width: 35rem;
+            max-width: 35rem;
+            height: 30rem;
+            transform: translateX(-8rem);
+            position: relative;
+        }
+
+        .research-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .research-card-img::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 12px;
+            border: 1px dashed var(--primary);
+            ;
+        }
+
+        .research-card-info {
+            flex: 1;
+        }
+
+        /* DOI 标签样式：作为研究元信息展示，并提示可交互 */
+        .research-card-doi {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary);
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .research-card-title {
+            font-size: 18px;
+            margin: 1.5rem 0 1rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .research-card-text {
+            margin-bottom: 2.5rem;
+            font-size: 15px;
+            color: var(--white);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .research-card-cta {
+            display: inline-block;
+            padding: 12px 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 13px;
+            color: var(--white);
+            background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .research-card-cta:hover {
+            background: linear-gradient(to right, var(--secondary) 0%, var(--primary) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(139, 251, 255, 0.4);
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .research-container {
+                padding: 120px 20px 40px;
+            }
+
+            .research-card {
+                padding: 2rem;
+                flex-direction: column;
+            }
+
+            .research-card-img {
+                min-width: 100%;
+                max-width: 100%;
+                height: 25rem;
+                transform: translate(0, -4rem);
+            }
+
+            .research-header h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+  
+    <header>
+        <nav class="navbar">
+            <h1><a href="index.html" class="logo">Jialing Xing</a></h1>
+            <ul class="navigation-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a class="active" href="research.html">Marketing Strategy</a></li>
+                <li><a href="design.html">Design</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+            <i class="mobile-menu-toggle fas fa-bars" aria-label="Toggle menu"></i>
+        </nav>
+
+        <div class="research-container">
+            <div class="research-header">
+                <h1>Marketing Strategy</h1>
+                <p>Here are my research projects and academic work. Want to know more? <a
+                        href="mailto:xjl15215998587@163.com">Email me</a>.</p>
+            </div>
+
+            <div class="research-cards">
+                <!-- Research Card 1 -->
+                <div class="research-card">
+                    <div class="research-card-img">
+                        <img src="./images/research/1.webp" alt="Research Project 1" style="object-position: right;" />
+                    </div>
+                    <div class="research-card-info">
+
+                        <h2 class="research-card-title">ISDIN
+                        </h2>
+                        <p class="research-card-text">
+                            This briefing outlines our work for the Student Service Design Challenge. We were given a
+                            choice of five brands and selected ISDIN. Our task was to design a skincare behaviour
+                            guidance service that was child-oriented, inclusive, adaptable to multicultural contexts,
+                            and encouraged long-term habit formation. The service needed to be easy to understand and
+                            use, while also enhancing children’s engagement through games, stories, or
+                            technology—helping them grow into advocates for their own skin health and that of their
+                            community. There were four of us on the team, but one male member was not actively involved
+                            and was absent on the final pitch day.
+
+                        </p>
+                        <a href="research/detail-1.html" class="research-card-cta">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Research Card 2 -->
+                <div class="research-card">
+                    <div class="research-card-img">
+                        <img src="./images/research/2.webp" alt="Research Project 2" />
+                    </div>
+                    <div class="research-card-info">
+
+                        <h2 class="research-card-title">Clair Obscur：Expedition 33</h2>
+                        <p class="research-card-text">
+                            Situation:
+                            During the second week of the course, our group was given a
+                            second assignment: to design an integrated marketing plan for
+                            Kepler Interactive’s new release, Expedition 33. The task
+                            involved connecting celebrities, KOLs and brands to reach the
+                            target players through social media and influencers. Although
+                            the original team of three became a team of two due to the
+                            absence of one member, we quickly adjusted our division of
+                            labour to ensure the project progressed smoothly.
+                        </p>
+                        <a href="./research/detail-2.html" class="research-card-cta">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Research Card 3 -->
+                <div class="research-card">
+                    <div class="research-card-img">
+                        <img src="./images/research/3.webp" alt="Research Project 3" />
+                    </div>
+                    <div class="research-card-info">
+                        <h2 class="research-card-title">SUPERCAR RESURRECTION</h2>
+                        <p class="research-card-text">
+                            The third brief was to produce a reality
+                            television programme, Making it in Dubai. This
+                            is a reality show aimed at an international
+                            audience, designed to showcase Dubai's
+                            multiculturalism, innovation and global reach
+                            through young people from the UK taking part
+                            in business, arts, or major event challenges.
+                            The objective was to inspire interest in and
+                            recognition of the city’s diversity and potential
+                            for the future.
+                        </p>
+                        <a href="./research/detail-3.html" class="research-card-cta">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Research Card 4 -->
+                <div class="research-card">
+                    <div class="research-card-img">
+                        <img src="./images/research/4.webp" alt="Research Project 4" />
+                    </div>
+                    <div class="research-card-info">
+                        <h2 class="research-card-title">FRIOLUXE</h2>
+                        <p class="research-card-text">
+                            The fourth brief – the only independent one to be completed this term – was part of an
+                            annual challenge for the next generation of creative talent, initiated by the international
+                            creative agency JDO, aimed at inspiring visionary and impactful design thinking. The brief
+                            essentially required us to design a new snack brand for a pub.
+                        </p>
+                        <a href="./research/detail-4.html" class="research-card-cta">Read More</a>
+                    </div>
+                </div>
+
+          
+            </div>
+        </div>
+        <footer>
+            <p>Copyright 2026 Jialing Xing. All rights reserved.</p>
+        </footer>
+    </header>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

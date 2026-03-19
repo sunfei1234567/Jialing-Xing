@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jialing Xing Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./common.css">
+
+
+
+    <!-- CV Page Styles -->
+    <style>
+        .cv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 150px 60px 60px;
+        }
+
+   
+
+        .cv-intro h1 {
+            font-size: 48px;
+            color: var(--white);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .cv-intro p {
+            color: var(--white);
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .cv-section {
+            background: rgba(219, 219, 219, 0.18);
+            padding: 50px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cv-section-title {
+            font-size: 36px;
+            color: var(--white);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .cv-item {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cv-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .cv-item-left {
+            color: var(--white);
+        }
+
+        .cv-time {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .cv-institution {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            line-height: 1.4;
+        }
+
+        .cv-item-right {
+            color: var(--white);
+        }
+
+        .cv-position {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .cv-details {
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 300;
+            color: var(--grey-text);
+        }
+
+        .cv-details-item {
+            margin-bottom: 5px;
+        }
+
+        .cv-link {
+            color: var(--primary);
+            text-decoration: underline;
+            transition: all 0.3s;
+        }
+
+        .cv-link:hover {
+            color: var(--secondary);
+        }
+
+        /* Publications Section */
+        .publication-item {
+            margin-bottom: 25px;
+            position: relative;
+            color: var(--white);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+
+        .author-highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .skill-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: var(--white);
+            min-width: 200px;
+        }
+
+        .skill-value {
+            color: var(--white);
+            font-weight: 300;
+        }
+
+        /* Responsive Design for Mobile */
+        @media screen and (max-width: 768px) {
+            .cv-container {
+                padding: 120px 20px 40px;
+            }
+
+            .cv-intro h1 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .cv-intro p {
+                font-size: 14px;
+            }
+
+            .cv-section {
+                padding: 30px 20px;
+                margin-bottom: 30px;
+            }
+
+            .cv-section-title {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .cv-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+
+            .cv-item-left {
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .cv-time {
+                font-size: 13px;
+                margin-bottom: 8px;
+            }
+
+            .cv-institution {
+                font-size: 16px;
+            }
+
+            .cv-position {
+                font-size: 18px;
+            }
+
+            .cv-details {
+                font-size: 13px;
+            }
+
+            .publication-item {
+                font-size: 13px;
+                padding-left: 15px;
+                margin-bottom: 20px;
+            }
+
+            .skills-grid {
+                gap: 15px;
+            }
+
+            .skill-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .skill-label {
+                min-width: auto;
+                font-size: 14px;
+            }
+
+            .skill-value {
+                font-size: 13px;
+            }
+        }
+
+        /* Tablet Responsive */
+        @media screen and (max-width: 1024px) and (min-width: 769px) {
+            .cv-container {
+                padding: 130px 40px 50px;
+            }
+
+            .cv-intro h1 {
+                font-size: 40px;
+            }
+
+            .cv-section {
+                padding: 40px;
+            }
+
+            .cv-item {
+                grid-template-columns: 200px 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+     
+  
+    <header>
+        <nav class="navbar">
+            <h1><a href="index.html" class="logo">Jialing Xing</a></h1>
+            <ul class="navigation-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="cv.html">CV</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="design.html">Design</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+            <i class="mobile-menu-toggle fas fa-bars" aria-label="Toggle menu"></i>
+        </nav>
+
+        <div class="cv-container">
+            <!-- Introduction -->
+            <div class="cv-intro">
+                <h1>Hi, i am Jialing Xing</h1>
+                <p>Email: xjl15215998587@163.com. &nbsp;|&nbsp; Phone: 075548430120</p><br/>
+                <!-- <p>A design technology researcher and practitioner with expertise in XR development, motion capture systems, and human-computer interaction. Currently pursuing a Master's degree in Design Technology at Cornell University with a focus on developing immersive environments and intelligent interaction systems for healthcare and education.</p> -->
+            </div>
+
+            <!-- Education Section -->
+            <section class="cv-section">
+                <h2 class="cv-section-title">Education</h2>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">Sep. 2023 – Jun. 2026</p>
+                        <p class="cv-institution">Kingston University</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">BA Creative and Culture: Art Direction</h3>
+                        <div class="cv-details">
+                            <p>
+                                You'll shape concepts into compelling images, narratives, and campaigns, communicating meaning, shaping culture, and
+connecting people through powerful ideas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+             
+            </section>
+
+            <!-- Research Experience & Relevant Projects Section -->
+            <section class="cv-section">
+                <h2 class="cv-section-title">Research Experience & Relevant Projects</h2>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">January 2025 – March 2025</p>
+                        <p class="cv-institution">London, England</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">ISDIN - Skin Protection Program</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item"><strong>Role: Marketing Intern</strong></p>
+                            <p class="cv-details-item">• Designed a service aimed at promoting healthy skin protection habits among children, preparing them for a healthier future.</p>
+                            <p class="cv-details-item">• Developed communication strategies to engage the target audience and raise awareness about skin protection.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">January 2025 – March 2025</p>
+                        <p class="cv-institution">London, England</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">Expedition 33 Kepler-Game Marketing Campaign</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item"><strong>Role: Marketing Strategy Intern</strong></p>
+                            <p class="cv-details-item">• Collaborated with renowned personalities for co-promotion and partnership in anticipation of an upcoming game launch.</p>
+                            <p class="cv-details-item">• Developed a comprehensive marketing plan focused on leveraging partnerships to maximize visibility and audience engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">January 2025 – March 2025</p>
+                        <p class="cv-institution">London, England</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">Hub making it in Dubai - Reality TV Show Event Planning</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item"><strong>Role: Event Planning Intern</strong></p>
+                            <p class="cv-details-item">• Assisted in creating a detailed program of events for a reality TV show aimed at showcasing Dubai's local and global vision.</p>
+                            <p class="cv-details-item">• Focused on raising awareness of Dubai's culture, beauty, and vision, enhancing its international reputation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">January 2025 – March 2025</p>
+                        <p class="cv-institution">London, England</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">JDO RAW - Design Competition</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item"><strong>Role: Design Intern</strong></p>
+                            <p class="cv-details-item">• Participated in a design competition to create a premium snack product for a high-end bar, producing logo designs, posters, and packaging.</p>
+                            <p class="cv-details-item">• Developed a cohesive brand identity and related marketing materials to support the product's launch.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">January 2025 – March 2025</p>
+                        <p class="cv-institution">London, England</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">Fine bone - Pride Month Outreach Program</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item"><strong>Role: Outreach and Community Engagement Intern</strong></p>
+                            <p class="cv-details-item">• Developed and implemented a low-budget outreach program during Pride Month to engage the LGBTQ+ community.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">January 2025 – March 2025</p>
+                        <p class="cv-institution">London, England</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">GOV.UK Project - Millennial & Underrepresented Group Engagement</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item"><strong>Role: Public Policy Intern</strong></p>
+                            <p class="cv-details-item">• Assisted the UK government in addressing the participation of millennials and underrepresented groups in shaping government policies.</p>
+                            <p class="cv-details-item">• Conducted research and proposed strategies for meaningful engagement and policy influence among these groups.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Publications Section -->
+            <!-- <section class="cv-section">
+                <h2 class="cv-section-title">Publications</h2>
+
+                <div class="publication-item">
+                    <strong>[1].&nbsp; </strong> Guo, Y., and <span class="author-highlight">Zhou, D.</span> "The Application of Gestalt Psychology's Principles of Visual Perception in Subway Spatial Visual Orientation." Da Zhong Wen Yi, vol. 8, 2023.
+                </div>
+
+                <div class="publication-item">
+                    <strong>[2].&nbsp; </strong> Zhang, H., and <span class="author-highlight">Zhou, D.</span> "Effects of Daylight Intensity on Emotion Regulation in a Virtual Healing Space." Human Factors in Design, Engineering, and Computing, vol. 159, 2024, pp. 1178–1186.
+                </div>
+
+                <div class="publication-item">
+                    <strong>[3].&nbsp; </strong> Li, Y., Ma, Z., Han, X., <span class="author-highlight">Zhou, D.</span>, & Wang, Z. (Under Review). A Multi-Objective Optimization Method for UI Interfaces Integrating NSGA-II and Simulated Annealing. Scientific Reports. (Under second-round review)
+                </div>
+            </section> -->
+
+            <!-- Professional Experience Section -->
+            <section class="cv-section">
+                <h2 class="cv-section-title">Professional Experience</h2>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">June 2024 – September 2024</p>
+                        <p class="cv-institution">Fizz Italian Catering Services Co., Ltd</p>
+                        <p class="cv-institution">Hangzhou, China</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">Product Planning Specialist</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item">• Conducted regular market research and competitive analysis to inform product development strategies, providing data-driven insights for new product proposals.</p>
+                            <p class="cv-details-item">• Managed the entire product lifecycle from concept proposal to market launch and eventual phase-out, ensuring products met market demands and company standards.</p>
+                            <p class="cv-details-item">• Collaborated with various departments to facilitate new product launches, ensuring seamless communication and execution across teams.</p>
+                            <p class="cv-details-item">• Developed promotional strategies for product launches, including crafting key selling points, setting pricing strategies, and forecasting sales volumes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <div class="cv-item-left">
+                        <p class="cv-time">December 2023 – Present</p>
+                        <p class="cv-institution">Jialing Fashion & Apparel Store</p>
+                        <p class="cv-institution">Hangzhou, China</p>
+                    </div>
+                    <div class="cv-item-right">
+                        <h3 class="cv-position">Operation Manager</h3>
+                        <div class="cv-details">
+                            <p class="cv-details-item">• Oversee daily wholesale operations, ensuring efficient stock management, order fulfillment, and timely deliveries.</p>
+                            <p class="cv-details-item">• Negotiate with clothing manufacturers and suppliers to secure high-quality products at competitive prices.</p>
+                            <p class="cv-details-item">• Maintain strong relationships with retailers and bulk buyers, understanding their needs and providing tailored product recommendations.</p>
+                            <p class="cv-details-item">• Monitor stock levels, coordinated warehousing, and optimized logistics to streamline distribution.</p>
+                            <p class="cv-details-item">• Analyze industry trends and competitor pricing to develop competitive pricing models that maximize profitability.</p>
+                            <p class="cv-details-item">• Represent the company at trade fairs and wholesale markets to expand the customer base and secure new business opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="cv-section">
+                <h2 class="cv-section-title">Skills & Interests</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span class="skill-label">IT Skills:</span>
+                        <span class="skill-value">Proficient in Adobe Premiere Pro (PR), Adobe Illustrator (AI), Adobe Photoshop (PS), and other design-related software. ⭐⭐⭐⭐</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-label">Team Leadership Skills:</span>
+                        <span class="skill-value">Previous experience leading a team of 8. ⭐⭐⭐⭐</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-label">Project Management Skills:</span>
+                        <span class="skill-value">Event planning and execution, time and resource coordination. ⭐⭐⭐⭐⭐</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-label">Digital Media Marketing:</span>
+                        <span class="skill-value">Platform operations (Instagram, Wechat, Redbook) and content creation (copywriting, short video production). ⭐⭐⭐</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-label">Languages:</span>
+                        <span class="skill-value">Fluent in Chinese and English.</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <span class="skill-label">Interests:</span>
+                        <span class="skill-value">Photography, traveling, reading design and fashion magazines, participating in community art projects.</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Copyright © 2026 Jialing Xing. All rights reserved.</p>
+        </footer>
+    </header>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

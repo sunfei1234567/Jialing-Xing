@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design - Jialing Xing Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./common.css">
+
+    <!-- Design Page Styles -->
+    <style>
+        .design-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 150px 60px 60px;
+        }
+
+        /* Design Header Section */
+        .design-header {
+            background: var(--primary);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px 50px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .design-header::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 150px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="10" width="15" height="15" fill="rgba(255,255,255,0.3)"/><rect x="30" y="10" width="15" height="15" fill="rgba(255,255,255,0.2)"/><rect x="50" y="10" width="15" height="15" fill="rgba(255,255,255,0.15)"/><rect x="10" y="30" width="15" height="15" fill="rgba(255,255,255,0.2)"/><rect x="30" y="30" width="15" height="15" fill="rgba(255,255,255,0.3)"/><rect x="50" y="30" width="15" height="15" fill="rgba(255,255,255,0.2)"/><rect x="10" y="50" width="15" height="15" fill="rgba(255,255,255,0.15)"/><rect x="30" y="50" width="15" height="15" fill="rgba(255,255,255,0.2)"/><rect x="50" y="50" width="15" height="15" fill="rgba(255,255,255,0.3)"/></svg>');
+            background-size: contain;
+            opacity: 0.4;
+        }
+
+        .design-header-content {
+            position: relative;
+            z-index: 1;
+            margin-left: auto;
+        }
+
+        .design-header h1 {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .design-header p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        /* Design Projects */
+        .design-projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .design-project {
+            background: rgba(255, 255, 255, 0.03);
+
+            transition: all 0.3s ease;
+        }
+
+        .design-project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 251, 255, 0.2);
+        }
+
+        .design-project-image {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .design-project-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border: 1px solid var(--primary);
+            border-bottom: none;
+        }
+
+
+        .design-project-info {
+            height: 400px;
+            padding: 40px 45px;
+            background: var(--primary);
+            backdrop-filter: blur(10px);
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .design-project-title {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.4);
+            text-underline-offset: 6px;
+        }
+
+        .design-project-description {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 300;
+            /* 多行文本截断CSS */
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            /* 限制显示4行 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: calc(1.8em * 6);
+            /* 行高 × 行数 */
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 1024px) {
+            .design-wrapper {
+                padding: 100px 30px 50px;
+            }
+
+            .design-projects {
+                gap: 30px;
+            }
+
+            .design-project-image {
+                height: 280px;
+            }
+
+            .design-project-info {
+                height: auto;
+                padding: 35px 30px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .design-wrapper {
+                padding: 100px 20px 40px;
+            }
+
+            .design-projects {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .design-header {
+                padding: 40px 30px;
+                margin-bottom: 40px;
+            }
+
+            .design-header::before {
+                width: 80px;
+                height: 80px;
+                left: 20px;
+            }
+
+            .design-header h1 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .design-header p {
+                font-size: 14px;
+            }
+
+            .design-project-image {
+                height: 300px;
+            }
+
+            .design-project-info {
+                padding: 30px 25px;
+            }
+
+            .design-project-title {
+                font-size: 20px;
+            }
+
+            .design-project-description {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+  
+    <header>
+        <nav class="navbar">
+            <h1><a href="index.html" class="logo">Jialing Xing</a></h1>
+            <ul class="navigation-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a class="active" href="design.html">Design</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+            <i class="mobile-menu-toggle fas fa-bars" aria-label="Toggle menu"></i>
+        </nav>
+
+        <div class="design-wrapper">
+            <!-- Design Header -->
+            <div class="design-header">
+                <div class="design-header-content">
+                    <h1>My Design</h1>
+                    <p>
+                     This page showcases my capabilities in brand visual design and creative content production, including logo design, poster creation, and short video production. I also have experience in designing offline promotional campaigns, translating brand concepts into engaging visual assets and immersive experiences.
+                    </p>
+                    <p>
+                     With a strong understanding of brand positioning and audience insights, I create cohesive and impactful visual and content strategies that enhance brand visibility and engagement across multiple channels.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Design Projects -->
+            <div class="design-projects">
+                <!-- Project 1: Emotional Burning Furnace -->
+                <a href="design/detail-1.html" style="text-decoration: none;">
+                    <div class="design-project">
+                        <div class="design-project-image">
+                            <img src="./images/design/1.webp" alt="Emotional Burning Furnace">
+                        </div>
+                        <div class="design-project-info">
+                            <h2 class="design-project-title">Emotional Burning Furnace</h2>
+                            <p class="design-project-description">
+                                I have found that people have different worries and bad emotions in daily life.
+                                For/example, when students fail to get ideal test results in study, they will have bad
+                                emotions, but they do not vent their bad emotions. Therefore, I want to make an
+                                emótional burning stove. When people have bad mood on certain occasions, they can timely
+                                and effectively relieve the bad mood. I have designed different types of emotional
+                                burning furnaces, each of which can burn dit-ferent types of bad mood. I designed the
+                                bracelets and stickers for each stove. People need to write down their worries on paper,
+                                wear bracelets and put stickers on their clothes. Before you can put the strip into the
+                                burner and burn it. After burning out, it means the bad mood is slowly fading away and
+                                good things are coming.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2: The Name of Love -->
+                <a href="design/detail-2.html" style="text-decoration: none;">
+                    <div class="design-project">
+                        <div class="design-project-image">
+                            <img src="./images/design/2.jpg"
+                                alt="The Name of Love">
+                        </div>
+                        <div class="design-project-info">
+                            <h2 class="design-project-title">《The Name of Love》</h2>
+                            <p class="design-project-description">
+                                I have found that people have different worries and bad emotions in daily life.
+                                For/example, when students fail to get ideal test results in study, they will have bad
+                                emotions, but they do not vent their bad emotions. Therefore, I want to make an
+                                emótional burning stove. When people have bad mood on certain occasions, they can timely
+                                and effectively relieve the bad mood. I have designed different types of emotional
+                                burning furnaces, each of which can burn dit-ferent types of bad mood. I designed the
+                                bracelets and stickers for each stove. People need to write down their worries on paper,
+                                wear bracelets and put stickers on their clothes. Before you can put the strip into the
+                                burner and burn it. After burning out, it means the bad mood is slowly fading away and
+                                good things are coming.
+
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3:LAVE -->
+
+                <a href="./design/detail-3.html" style="text-decoration: none;">
+                    <div class="design-project">
+                        <div class="design-project-image">
+                            <img src="./images/design/3.webp"
+                                alt="LAVE">
+                        </div>
+                        <div class="design-project-info">
+                            <h2 class="design-project-title">LAVE</h2>
+                            <p class="design-project-description">
+                                Lavé is a premium botanical sparkling tea brand, rooted in organic ingredients and
+                                herbal traditions, blending sparkling green tea with soothing botanical essences such as
+                                lavender. It aims to meet consumers' growing demand for healthier, more refined and
+                                aesthetically pleasing non-alcoholic beverages that evoke emotional resonance. As
+                                younger consumers, particularly Gen Z students and health-conscious women, increasingly
+                                turn away from sugary and artificially sweetened soft drinks, the market lacks options
+                                that combine health benefits, sensory enjoyment, and lifestyle appeal. Lavé fills this
+                                gap by reimagining sparkling beverages through a health-first, design-driven philosophy.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4:Trace -->
+                <a href="./design/detail-4.html">
+                    <div class="design-project">
+                        <div class="design-project-image">
+                            <img src="./images/design/4.webp" alt="Trace ">
+                        </div>
+                        <div class="design-project-info">
+                            <h2 class="design-project-title">Trace </h2>
+                            <p class="design-project-description">
+                                Large-scale wars caused by conflicts between countries still exist today in the 21st
+                                century. Wars bring various threats not only to nature but also to human beings. This
+                                kind of persecution of nature and psychological trauma of the people is like an
+                                indelible trace, 1 combine this kind of war trauma with the allergy of the human body. I
+                                made a human body installation, combining mangoes, pollen, cosmetics and seafood to
+                                people's allergic reactions, which is analogous to the destruction of soil, the
+                                pollution of Marine life, the destruction of forests and the pollution of the atmosphere
+                                after the war. Let them have a close connection before, so that people can more directly
+                                see the human and the earth's allergy to war, to call for world peace, reduce the vision
+                                of war.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright © 2026 Jialing Xing. All rights reserved.</p>
+        </footer>
+    </header>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
